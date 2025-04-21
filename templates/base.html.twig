@@ -4,14 +4,45 @@
         <meta charset="UTF-8">
         <title>{% block title %}Welcome!{% endblock %}</title>
         <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text><text y=%221.3em%22 x=%220.2em%22 font-size=%2276%22 fill=%22%23fff%22>sf</text></svg>">
+        
+        <link rel="stylesheet" href="styles\accueil.css">
+        <link rel="stylesheet" href="styles\header.css">
+        <link rel="stylesheet" href="styles\footer.css">
+        <link rel="stylesheet" href="styles\style.css">
+
+        <style>
+    
+            body {
+                display: flex;
+                margin: 0;
+                padding: 0;
+            }
+            .side-border {
+                width: 20%;
+                background-color: black;
+                height: 100vh;
+            }
+            .content {
+                width: 60%;
+                margin: 0 auto;
+            }
+        </style>
         {% block stylesheets %}
+
         {% endblock %}
 
         {% block javascripts %}
-            {% block importmap %}{{ importmap('app') }}{% endblock %}
         {% endblock %}
     </head>
     <body>
-        {% block body %}{% endblock %}
+        <div class="side-border"></div>
+        <div class="content">
+            {% include 'partials/header.html.twig' %}
+            <main>
+                {% block body %}{% endblock %}
+            </main>
+            {% include 'partials/footer.html.twig' %}
+        </div>
+        <div class="side-border"></div>
     </body>
 </html>

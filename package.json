@@ -1,0 +1,34 @@
+{
+  "name": "animesite",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "homepage": "https://github.com/ljaquerod/AnimeSite#readme",
+  "bugs": {
+    "url": "https://github.com/ljaquerod/AnimeSite/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ljaquerod/AnimeSite.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    
+  },
+  "devDependencies": {
+    "@hotwired/stimulus": "^3.0.0",
+    "@hotwired/turbo": "^7.1.1 || ^8.0",
+    "@symfony/stimulus-bridge": "^3.2.0 || ^4.0.0",
+    "@symfony/ux-turbo": "file:vendor/symfony/ux-turbo/assets",
+    "autoprefixer": "^10.4.21"
+  }
+}
